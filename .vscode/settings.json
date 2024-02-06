@@ -1,5 +1,15 @@
 {
     "cSpell.words": [
         "tailwindcss"
-    ]
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "editor.formatOnSave": true,
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "stylelint.validate": [
+        "css"
+    ],
 }
