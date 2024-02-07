@@ -6,9 +6,9 @@ import ProjectCard from '$/components/ProjectCard'
 import PostCard from '$/components/PostCard'
 import SocialLinks from '$/components/SocialLinks'
 import convertAsteriskToStrongTag from '$/utils/convertAsteriskToStrongTag'
+import { posts } from '../../.velite'
 
 export default function Home() {
-  const posts = []
   return (
     <main className='flex flex-col gap-20'>
       <article className='flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-12'>
@@ -47,9 +47,9 @@ export default function Home() {
               .slice(0, 2)
               .map((post) => (
                 <PostCard
-                  publishedAt={post.data.publishedAt}
-                  title={post.data.title}
-                  description={post.data.description}
+                  publishedAt={new Date(post.date)}
+                  title={post.title}
+                  description={post.description}
                   slug={post.slug}
                 />
               ))}

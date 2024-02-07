@@ -17,7 +17,6 @@ export default function PostCard({ title, publishedAt, description, slug }: Post
         <p className='text-neutral-100'>{title}</p>
         <div className='flex flex-row items-center gap-4'>
           <p>{formatDate(publishedAt)}</p>
-
           <svg
             width='18'
             height='18'
