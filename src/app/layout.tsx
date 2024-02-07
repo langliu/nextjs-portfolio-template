@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import '$/styles/post.css'
 import Header from '$/components/Header'
+import BlurCircle from '$/components/shared/BlurCircle'
+import theme from '$/data/theme'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,8 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='zh'>
-      <body className={inter.className}>
+      <body
+        className={`mx-auto flex min-h-screen max-w-[872px] flex-col gap-9 bg-neutral-950 px-10 py-8 text-sm text-neutral-400 md:gap-20 md:py-16 ${inter.className}`}
+      >
         <Header />
+        <BlurCircle position='top' color={theme.colors.blur.top} />
+        <BlurCircle position='bottom' color={theme.colors.blur.bottom} />
         {children}
       </body>
     </html>
