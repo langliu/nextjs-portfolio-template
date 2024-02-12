@@ -10,8 +10,9 @@ export type PostCardProps = {
 export default function PostCard({ title, publishedAt, description, slug }: PostCardProps) {
   return (
     <a
-      className='group flex max-w-sm cursor-pointer flex-col gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:-translate-y-2 hover:border-neutral-400'
+      className='group flex max-w-sm cursor-pointer flex-col gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:-translate-y-2 hover:border-neutral-400 flex-1'
       href={`/posts/${slug}`}
+      key={slug}
     >
       <div className='flex w-full flex-col justify-between gap-2 md:flex-row md:items-center'>
         <p className='text-neutral-100'>{title}</p>
